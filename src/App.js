@@ -17,7 +17,7 @@ function App() {
 
   // initialize the movies on the front of the page to iron man movies because tony stark is the best
   useEffect(() => {
-    axios.get(`http://www.omdbapi.com/?i=tt3896198&apikey=9cb40b71&s=""&s="iron%20man"&type="movie"`)
+    axios.get(`https://www.omdbapi.com/?i=tt3896198&apikey=9cb40b71&s="iron%20man"&type="movie"`)
     .then((data) => {
       setMovieList(data.data.Search);
     })
