@@ -1,0 +1,19 @@
+.movie-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    width: 320px;
+}
+
+.movie-img {
+    height: 420px;
+    width: 100%;
+}
+
+.movie-title {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}

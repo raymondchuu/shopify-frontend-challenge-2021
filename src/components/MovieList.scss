@@ -1,0 +1,77 @@
+@import "../styles/animations.scss";
+
+.movielist-outer-container {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fbf7ed;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px 20px;
+}
+
+.movies-list-item {
+    margin-bottom: 5%;
+}
+
+.movieList-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.movies-subtitle {
+    color: #004c3f;
+    font-size: 30px;
+    align-self: flex-start;
+    margin-left: 8%;
+    font-weight: 500;
+    border-bottom: 1px solid #004c3f;
+}
+
+.nominations-btn {
+    background-color: #008060;
+    color: #FFF;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 3%;
+    transition: 0.2s ease-in;
+}
+
+.nominations-btn:focus {
+    outline: none;
+}
+
+.nominations-btn:hover {
+    background-color: #004c3f;
+}
+
+.loading-movies {
+    margin-right: 2rem;
+    width: 30px;
+    height: auto;
+    animation: rotate 1s linear infinite;
+}
+
+.loading-text {
+    font-size: 20px;
+}
+
+.loading-container {
+    padding-bottom: 8%;
+}
+
+.no-results-container {
+    margin-bottom: 10%;
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 960px) {
+    .movielist-outer-container {
+        width: 100%;
+        margin-top: 150px;
+    }
+}

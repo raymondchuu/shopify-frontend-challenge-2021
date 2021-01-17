@@ -1,0 +1,49 @@
+.nom-list-item {
+    display: flex;
+    width: 100%;
+    margin-bottom: 5%;
+    padding-left: 10px;
+    background-color: #FFF;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.nom-list-inner-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nom-remove-btn {
+    background-color: #ee5253;
+    color: #FFF;
+    padding: 0px 15px;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+    width: 5em;
+}
+
+.nom-remove-btn:hover {
+    color: #ee5253;
+    background-color: #FFF;
+    border: 2px solid #ee5253;
+}
+
+.nom-remove-btn:focus {
+    outline: none;
+}
+
+.nom-list-title {
+    margin: 7px 0;
+    padding-right: 10px;
+}
+
+@media only screen and (max-width: 960px) {
+    .nom-list-item {
+        font-size: 12px;
+    }
+
+    .nom-remove-btn {
+        padding: 0;
+    }
+}

@@ -1,0 +1,25 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #FFF;
+}
+
+.Lists {
+  display: flex;
+  justify-content: space-between;
+  margin-inline-start: 5%;
+  margin-inline-end: 5%;
+  margin-top: 10%;
+}
+
+@media only screen and (max-width: 960px) {
+  .App {
+    font-size: 12px;
+    flex-direction: column;
+  }
+
+  .Lists {
+    flex-direction: column-reverse;
+  }
+}
