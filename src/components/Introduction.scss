@@ -40,6 +40,15 @@
     cursor: pointer;
     color: white;
     padding: 10px 20px; 
+    transition: 0.2s ease-in-out all;
+}
+
+.intro-btn:focus {
+    outline: none;
+}
+
+.intro-btn:hover {
+    background-color: #004c3f;
 }
 
 @media only screen and (max-width: 960px) {
