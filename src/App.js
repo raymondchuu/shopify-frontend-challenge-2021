@@ -44,7 +44,7 @@ function App() {
     event.preventDefault();
     setError(false);
     setMovieList([]);
-    axios.get(`http://www.omdbapi.com/?i=tt3896198&apikey=9cb40b71&s=""&s=${movie}&type="movie"`)
+    axios.get(`https://www.omdbapi.com/?i=tt3896198&apikey=9cb40b71&s=""&s=${movie}&type="movie"`)
     .then((data) => {
       //intentiionally delay setting state for movies list to show the searching animation
       setSearching(true);
