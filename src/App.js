@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Appbar from './components/Appbar';
 import NominationsList from './components/NominationsList';
 import MoviesList from './components/MoviesList';
+import Introduction from './components/Introduction';
+import Backdrop from './components/Backdrop';
 import axios from 'axios';
 
 import './App.scss';
@@ -14,6 +16,11 @@ function App() {
   const [searching, setSearching] = useState(false);
   const [nominationError, setNominationError] = useState("");
   const [addedNotification, setAddedNotification] = useState("");
+  const [toggleIntro, setToggleIntro] = useState(false);
+
+  useEffect(() => {
+    setToggleIntro(true);
+  }, [])
 
   // initialize the movies on the front of the page to iron man movies because tony stark is the best
   useEffect(() => {
@@ -38,6 +45,10 @@ function App() {
   useEffect(() => {
     localStorage.setItem('nominations', JSON.stringify(nominationsList));
   }, [nominationsList])
+
+  function handleClose() {
+    setToggleIntro(false);
+  }
 
   // handles the onlick functionality when clients search for movies
   function handleSearch(event) {
@@ -66,6 +77,8 @@ function App() {
 
   return (
     <div className="App">
+      <Introduction show={toggleIntro} handleClose={handleClose} />
+      { toggleIntro ? <Backdrop click={handleClose} /> : "" }
       <Appbar movie={movie} setMovie={setMovie} handleSearch={handleSearch} />
       <div className="Lists">
         <MoviesList 
